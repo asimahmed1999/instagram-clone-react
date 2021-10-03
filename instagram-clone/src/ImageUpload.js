@@ -2,6 +2,7 @@ import { Button } from '@mui/material';
 import React, { useState } from 'react';
 import firebase from 'firebase/compat/app';
 import { storage, db } from "./firebase";
+import './ImageUpload.css';
 
 function ImageUpload({ username}) {
     const [image, setImage] = useState(null);
@@ -55,7 +56,7 @@ function ImageUpload({ username}) {
 
 
     return (
-        <div>
+        <div className="imageupload">
             {/* {i want to have...} */}
             {/* {caption input} */}
             {/* {File Picker} */}

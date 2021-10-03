@@ -101,13 +101,7 @@ function App() {
 
   return (
     <div className="app">
-      {user?.displayName ? (
-        <ImageUpload username={user.displayName} />
-      ) : (
-        <h3>Sorry you need to login to upload</h3>
-      )}
       
-
       <Modal
         open={openSignIn}
         onClose={() => setOpenSignIn(false)}
@@ -176,7 +170,11 @@ function App() {
         ))
       }
 
-
+      {user?.displayName ? (
+        <ImageUpload username={user.displayName} />
+      ) : (
+        <h3>Sorry you need to login to upload</h3>
+      )}
 
 
       {/* <Post username="Asim Ahmed" caption=" Wow it works" imageUrl="https://www.freecodecamp.org/news/content/images/2021/06/Ekran-Resmi-2019-11-18-18.08.13.png"/>
